@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boda Carmen & Domingo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="intro">
+    <div class="envelope" id="envelope">
+      
+      <div class="bottom-flap"></div>
+
+      <div class="invitation" id="invitation">
+        <div class="invitation-content">
+          
+          <section class="hero">
+            <h3>Nos Casamos</h3>
+            <div class="separator">✦</div>
+            <h1 class="names">Carmen</h1>
+            <div class="ampersand">&</div>
+            <h1 class="names">Domingo</h1>
+            <div class="separator">✦</div>
+            <p class="phrase">Nos haría muy felices compartir este día con vosotros.</p>
+          </section>
+
+          <section class="countdown-container">
+            <h2 class="countdown-title">SÓLO FALTAN:</h2>
+            <div class="countdown" id="clock">
+              <div class="time-block">
+                <span id="days">00</span>
+                Días
+              </div>
+              <div class="time-block">
+                <span id="hours">00</span>
+                Horas
+              </div>
+              <div class="time-block">
+                <span id="minutes">00</span>
+                Min.
+              </div>
+              <div class="time-block">
+                <span id="seconds">00</span>
+                Seg.
+              </div>
+            </div>
+          </section>
+
+          <section class="details">
+            
+            <div class="details-glass-card">
+              <h2 style="text-align: center;">Dónde y Cuándo</h2>
+              <div class="date-row">
+                <div class="date-box number">02</div>
+                <div class="date-center-col">
+                  <div class="date-month cursive">de Octubre</div>
+                  <div class="date-year">2027</div>
+                </div>
+                <div class="time-badge">19:00 h</div>
+              </div>
+
+              <div class="details-divider"></div>
+
+              <div class="location-grid">
+                <div class="details-text">
+                  <span class="venue-label">Celebración en</span>
+                  <div class="location-info">Hotel Exe Las Adelfas</div>
+                  <p class="city">Córdoba</p>
+                </div>
+
+                <div class="map-wrapper">
+                  <div class="map-container">
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.5410051187123!2d-4.80164802344799!3d37.94112340242253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdf6440131ab3%3A0x6dcd69634ee0413c!2sHotel%20Exe%20Las%20Adelfas!5e0!3m2!1ses!2ses!4v1717080000000!5m2!1ses!2ses" 
+                      width="100%" 
+                      height="100%" 
+                      style="border:0;" 
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
+                  <a href="https://maps.app.goo.gl/3C6Vp4g3Gst4mYmF6" target="_blank" class="map-btn">
+                    📍 Abrir en Google Maps
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="accommodation">
+            <h2>Alojamiento</h2>
+            <p>Para vuestra comodidad, os recomendamos hospedaros en el mismo hotel del evento.</p>
+            
+            <div class="hotel-gallery">
+              <div class="hotel-img-frame frame-left">
+                <img src="img/ft1.jpg" alt="Exterior Hotel Exe Las Adelfas">
+              </div>
+              <div class="hotel-img-frame frame-right">
+                <img src="img/ft2.jpg" alt="Instalaciones Hotel Exe Las Adelfas">
+              </div>
+            </div>
+
+            <div class="hotel-card">
+              <h3>Hotel Exe Las Adelfas</h3>
+              <p>Disponemos de un descuento especial utilizando el código:</p>
+              <div class="code-box" id="promo-code" title="Haz clic para copiar">
+                <span class="code-text">CODIGODESCUENTO</span>
+              </div>
+              <p class="copy-alert" id="copy-alert">¡Código copiado al portapapeles!</p>
+              
+              <a href="https://www.eurostarshotels.com/exe-las-adelfas.html" target="_blank" class="btn btn-hotel-web">
+                🏨 Reservar Habitación
+              </a>
+            </div>
+          </section>
+
+          <section class="rsvp">
+            <h2 class="rsvp-title">Confirmar Asistencia</h2>
+            <p>Por favor, rellena el formulario para actualizar nuestra lista de invitados de forma automática.</p>
+            
+            <form id="rsvp-form" class="wedding-form">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+              </div>
+              
+              <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" id="apellidos" name="apellidos" required placeholder="Tus apellidos">
+              </div>
+              
+              <div class="form-group">
+                <label for="alergias">Alergias o Restricciones Alimenticias</label>
+                <textarea id="alergias" name="alergias" rows="3" placeholder="Ej: Celíaco, Vegano, Alergia a frutos secos... (Si no tienes, déjalo en blanco)"></textarea>
+              </div>
+              
+              
+              <button type="submit" class="btn btn-submit" id="submit-btn">Enviar Confirmación</button>
+            </form>
+            <p id="form-status" class="form-status"></p>
+
+            <div class="separator">✦</div>
+
+            <p class="rsvp-help">Si prefieres llamarnos o tienes dudas, puedes contactarnos directamente:</p>
+            <div class="phone-container">
+              <div class="phone-card">
+                <h4>Carmen</h4>
+                <a href="https://wa.me/34600259505" target="_blank">600 259 505</a>
+              </div>
+              <div class="phone-card">
+                <h4>Domingo</h4>
+                <a href="https://wa.me/34645683885" target="_blank">645 683 885</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="timeline-section">
+            <h2>Programa del Día</h2>
+            <p class="timeline-subtitle">Lo que tenemos preparado para vosotros</p>
+            
+            <div class="timeline-container">
+              <div class="timeline-bg-line"></div>
+              <div class="timeline-progress-line" id="timeline-progress"></div>
+              
+              <div class="timeline-item" data-step="1">
+                <div class="timeline-time">12:00</div>
+                <div class="timeline-icon-wrapper">
+                  <div class="timeline-icon">⛪</div>
+                </div>
+                <div class="timeline-text">Ceremonia</div>
+              </div>
+
+              <div class="timeline-item" data-step="2">
+                <div class="timeline-time">14:30</div>
+                <div class="timeline-icon-wrapper">
+                  <div class="timeline-icon">🍸</div>
+                </div>
+                <div class="timeline-text">Cóctel</div>
+              </div>
+
+              <div class="timeline-item" data-step="3">
+                <div class="timeline-time">16:30</div>
+                <div class="timeline-icon-wrapper">
+                  <div class="timeline-icon">🍽️</div>
+                </div>
+                <div class="timeline-text">Banquete</div>
+              </div>
+
+              <div class="timeline-item" data-step="4">
+                <div class="timeline-time">18:30</div>
+                <div class="timeline-icon-wrapper">
+                  <div class="timeline-icon">🎵</div>
+                </div>
+                <div class="timeline-text">Fiesta</div>
+              </div>
+
+              <!--<div class="timeline-item" data-step="5">
+                <div class="timeline-time">06:00</div>
+                <div class="timeline-icon-wrapper last-item">
+                  <div class="timeline-icon moon-icon">🌙</div>
+                </div>
+                <div class="timeline-text">Fin de fiesta</div>
+              </div>
+            </div>-->
+          
+          </section>
+          <section class="music-suggestion">
+            <h2>¿Qué canción no puede faltar?</h2>
+            <p>Queremos que la pista de baile esté a tope. ¡Ayúdanos a crear la playlist perfecta para la fiesta!</p>
+            
+            <form id="music-form" class="wedding-form">
+              <div class="form-group">
+                <label for="cancion">Canción / Artista</label>
+                <input type="text" id="cancion" name="cancion" required placeholder="Ej: Flying Free - Pont Aeri / Vivir mi vida - Marc Anthony">
+              </div>
+              
+              <div class="form-group">
+                <label for="invitado-musica">Tu Nombre (Opcional)</label>
+                <input type="text" id="invitado-musica" name="invitado-musica" placeholder="Para saber a quién dedicársela">
+              </div>
+              
+              <button type="submit" class="btn btn-submit" id="music-submit-btn">🎵 Añadir a la Playlist</button>
+            </form>
+            <p id="music-form-status" class="form-status"></p>
+          </section>
+
+        </div>
+      </div>
+
+      <div class="top-flap"></div>
+      <div class="left-flap"></div>
+      <div class="right-flap"></div>
+
+      <div class="seal" id="seal">✦</div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
